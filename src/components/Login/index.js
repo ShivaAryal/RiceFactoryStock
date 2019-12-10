@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { View, ScrollView, ImageBackground,ActivityIndicator, KeyboardAvoidingView,TouchableOpacity, StyleSheet, AsyncStorage } from 'react-native';
+import { View, ScrollView, ImageBackground,ActivityIndicator, KeyboardAvoidingView,TouchableOpacity, AsyncStorage } from 'react-native';
 import { TextInput, Text, HelperText } from 'react-native-paper';
+import { styles } from './login.css';
 import LoginService from './login.services';
 
 class Login extends Component {
@@ -113,35 +114,3 @@ class Login extends Component {
 }
 
 export default Login;
-
-const styles = StyleSheet.create({
-    button:{
-        height:40,
-        width:80,
-        borderRadius:5,
-        marginTop:50,
-        alignItems:'center',
-        justifyContent:'center'
-    },
-    text:{
-        fontSize:18,
-        color:'#fff'
-    },
-    loaderContainer:{
-        flex: 1,
-        zIndex: 1111,
-        backgroundColor: 'rgba(255,255,255,0.4)',
-        position: 'absolute',
-        top: 0,
-        right: 0,
-        left: 0,
-        bottom: 0,
-        alignItems: 'center',
-      },
-    loader: {
-        width: 50,
-        top: '25%',
-        zIndex: 11111,
-        alignSelf:'center'
-      },
-})

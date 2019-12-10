@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { View, ScrollView, StyleSheet, Text, ActivityIndicator } from 'react-native';
+import { View, ScrollView, Text, ActivityIndicator } from 'react-native';
 import Header from './../Header';
+import { styles} from './monthlysales.css';
 import {Table,Row,Rows} from 'react-native-table-component';
 import {getToken} from './../../utils';
 import MonthlySalesService from './monthlySales.services';
@@ -73,29 +74,3 @@ class BhushSales extends Component {
 }
 
 export default BhushSales;
-
-const styles = StyleSheet.create({
-    loaderContainer:{
-        flex: 1,
-        zIndex: 1111,
-        backgroundColor: '#ffffff85',
-        position: 'absolute',
-        top: 0,
-        right: 0,
-        left: 0,
-        bottom: 0,
-        alignItems: 'center',
-    },
-    loader: {
-        width: 50,
-        top: '25%',
-        zIndex: 11111,
-        alignSelf:'center'
-    },
-    head: {
-        backgroundColor: '#f1f8ff' 
-    },
-    text: {
-        margin: 6 
-    },
-})
